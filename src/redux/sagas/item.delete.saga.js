@@ -7,7 +7,9 @@ function* itemDelete(action) {
   try {
         yield axios.delete(`/api/shelf/${action.payload}`)
         yield put({ type: 'GET_ITEM'})
-    };
+    } catch {
+        console.log(err);
+    }
 
 }
 
