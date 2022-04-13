@@ -6,7 +6,17 @@ const router = express.Router();
  * Get all of the items on the shelf
  */
 router.get('/', (req, res) => {
-  res.sendStatus(200); // For testing only, can be removed
+  console.log('in shelf.router GET');
+
+  const query = 'SELECT * FROM "item" ORDER BY "id" DESC'
+  
+  pool.query(query)
+  .then(result => {
+  res.sendStatus(200);
+  })
+  .catch(err => {
+    console.log('ERROR in shelf.router GET', err);
+  })
 });
 
 /**
