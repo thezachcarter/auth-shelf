@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
   
   pool.query(query)
   .then(result => {
+  console.log(result.rows);
   res.sendStatus(200);
   })
   .catch(err => {

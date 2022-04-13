@@ -31,6 +31,7 @@ function App() {
     dispatch({ type: 'FETCH_USER' });
   }, [dispatch]);
 
+  console.log();
   return (
     <Router>
       <div>
