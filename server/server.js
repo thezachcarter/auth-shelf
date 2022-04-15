@@ -29,7 +29,7 @@ const upload = multer({ storage: storage})
 
 // For Single image upload
 app.post('/upload', upload.single('image'), (req, res) => {
-  res.send("goodies")
+  res.send("Image Uploaded")
  
 });
 

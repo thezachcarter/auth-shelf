@@ -38,7 +38,6 @@ function ShelfForm() {
         <h3>Put an item on the shelf!</h3>
         
             <form method="POST" action="/upload" encType="multipart/form-data">
-                
                 <label>Upload image</label>
                 <input type="file" name="image" required/>
                 <input type="submit" value="Upload" />
