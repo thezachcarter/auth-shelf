@@ -2,7 +2,7 @@ import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
 function* deleteItemSaga(action){
-  yield takeLast
+  yield takeLatest('DELETE_ITEM', itemDelete)
 }
 
 // worker Saga: will be fired on "FETCH_USER" actions
@@ -17,4 +17,4 @@ function* itemDelete(action) {
 }
 
 
-export default itemDelete;
+export default deleteItemSaga;
