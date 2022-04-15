@@ -40,7 +40,7 @@ function ShelfPage() {
             {item.map((oneItem) => {
               console.log(oneItem);
               return (
-              <tr>
+              <tr key={oneItem.id}>
               <td>{oneItem.username}</td>
               <td><img src={oneItem.image_url}/></td>
               <td>{oneItem.description}</td>
