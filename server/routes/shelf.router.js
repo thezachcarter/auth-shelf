@@ -8,12 +8,14 @@ const router = express.Router();
 router.get('/', (req, res) => {
   console.log('in shelf.router GET');
 
-  const query = 'SELECT * FROM "item" ORDER BY "id" DESC'
+  const query = `SELECT * FROM "item" 
+  JOIN "user" ON "user".id = "item".user_id
+  ORDER BY "item".id DESC;`;
   
   pool.query(query)
   .then(result => {
   console.log(result.rows);
-  res.sendStatus(200);
+  res.send(result.rows);
   })
   .catch(err => {
     console.log('ERROR in shelf.router GET', err);
