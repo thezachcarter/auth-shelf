@@ -36,11 +36,17 @@ function ShelfForm() {
     return (
         <div>
         <h3>Put an item on the shelf!</h3>
-        <form>
-            <input type="text" placeholder="description" onChange={handleItemDescription}/>
-            <input type="text" placeholder="image url" onChange={handleItemImage}/>
-            <button type="submit" onClick={(event) => handleSubmit(event)}>Submit</button>
-        </form>
+        
+            <form method="POST" action="/upload" encType="multipart/form-data">
+                
+                <label>Upload image</label>
+                <input type="file" name="image" required/>
+                <input type="submit" value="Upload" />
+                
+                <input type="text" placeholder="description" onChange={handleItemDescription}/>
+                {/* <input type="text" placeholder="image url" onChange={handleItemImage}/> */}
+                <button type="submit" onClick={(event) => handleSubmit(event)}>Submit</button>
+            </form>
         </div>
     )
 }

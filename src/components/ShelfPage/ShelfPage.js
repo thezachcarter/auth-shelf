@@ -5,6 +5,7 @@ import { useEffect} from 'react';
 
 function ShelfPage() {
 
+  
   const dispatch = useDispatch();
   const item = useSelector(store => store.item);
 
@@ -23,9 +24,9 @@ function ShelfPage() {
   return (
     <div className="container">
       <h2>Shelf</h2>
-      <p>All of the available items can be seen here.</p>
       
-      
+      {/* <ImageUpload/> */}
+  
       <table> 
         <thead>
         <tr>
