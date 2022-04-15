@@ -15,6 +15,11 @@ function ShelfPage() {
 
 console.log(item);
 
+  const itemDelete = () => {
+    console.log('delete clicked');
+    dispatch({ type:'DELETE_ITEM'});
+  }
+
   return (
     <div className="container">
       <h2>Shelf</h2>
@@ -39,7 +44,7 @@ console.log(item);
               <td>{oneItem.username}</td>
               <td><img src={oneItem.image_url}/></td>
               <td>{oneItem.description}</td>
-              <td><button>Delete</button></td>
+              <td><button onClick={itemDelete}>Delete</button></td>
               </tr>
               )
             })}
