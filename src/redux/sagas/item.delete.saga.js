@@ -1,6 +1,10 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
+function* deleteItemSaga(action){
+  yield takeLast
+}
+
 // worker Saga: will be fired on "FETCH_USER" actions
 // confirm what the type should be called?
 function* itemDelete(action) {
@@ -10,12 +14,7 @@ function* itemDelete(action) {
     } catch {
         console.log(err);
     }
-
 }
 
-// What is this called? Confirm with team?
-function* userSaga() {
-  yield takeLatest('GET_ITEM', getItems);
-}
 
-export default userSaga;
+export default itemDelete;
