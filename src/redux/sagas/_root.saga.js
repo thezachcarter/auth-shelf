@@ -19,7 +19,6 @@ export default function* rootSaga() {
     registrationSaga(),
     userSaga(),
     postItemSaga(),
-    itemsSaga(),
     getItems(),
     deleteItemSaga()
   ]);

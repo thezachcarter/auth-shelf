@@ -13,12 +13,12 @@ function ShelfPage() {
     dispatch({ type: 'GET_ITEM' });
 }, []);
 
-console.log(item);
 
-  const itemDelete = () => {
-    console.log('delete clicked');
-    dispatch({ type:'DELETE_ITEM'});
-  }
+
+  // const itemDelete = () => {
+  //   console.log('DELETE BUTTON CLICKED', item.id);
+  //   dispatch({ type:'DELETE_ITEM', payload: item.id});
+  // }
 
   return (
     <div className="container">
@@ -44,7 +44,7 @@ console.log(item);
               <td>{oneItem.username}</td>
               <td><img src={oneItem.image_url}/></td>
               <td>{oneItem.description}</td>
-              <td><button onClick={itemDelete}>Delete</button></td>
+              <td><button onClick={(event) => dispatch({ type:'DELETE_ITEM', payload: oneItem.id})}>Delete</button></td>
               </tr>
               )
             })}
